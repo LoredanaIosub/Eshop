@@ -26,7 +26,5 @@ namespace Eshop.Controllers
 
             return View();
         }
-
-       
     }
 }
