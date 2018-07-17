@@ -19,6 +19,6 @@ namespace Eshop.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Eshop.Models.ContactModel> ContactModels { get; set; }
+        public System.Data.Entity.DbSet<Eshop.Models.Contact> ContactModels { get; set; }
     }
 }

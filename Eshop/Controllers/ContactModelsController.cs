@@ -27,7 +27,7 @@ namespace Eshop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContactModel contactModel = db.ContactModels.Find(id);
+            Contact contactModel = db.ContactModels.Find(id);
             if (contactModel == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace Eshop.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Nume,Prenume,NumarTelefon,Email,Mesaj")] ContactModel contactModel)
+        public ActionResult Create([Bind(Include = "ID,Nume,Prenume,NumarTelefon,Email,Mesaj")] Contact contactModel)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace Eshop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContactModel contactModel = db.ContactModels.Find(id);
+            Contact contactModel = db.ContactModels.Find(id);
             if (contactModel == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace Eshop.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nume,Prenume,NumarTelefon,Email,Mesaj")] ContactModel contactModel)
+        public ActionResult Edit([Bind(Include = "ID,Nume,Prenume,NumarTelefon,Email,Mesaj")] Contact contactModel)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace Eshop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ContactModel contactModel = db.ContactModels.Find(id);
+            Contact contactModel = db.ContactModels.Find(id);
             if (contactModel == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace Eshop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ContactModel contactModel = db.ContactModels.Find(id);
+            Contact contactModel = db.ContactModels.Find(id);
             db.ContactModels.Remove(contactModel);
             db.SaveChanges();
             return RedirectToAction("Index");
