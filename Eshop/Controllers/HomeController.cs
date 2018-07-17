@@ -30,7 +30,7 @@ namespace Eshop.Controllers
             model.LastName = "Ion";
             model.Phone = 0722;
             model.Message = "Bine ai venit!";
-            model.ID = 0;
+            model.Id = 0;
             model.Email = "sasss@gmai.com";
             return View(model);
         }
