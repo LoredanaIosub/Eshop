@@ -27,11 +27,6 @@ namespace Eshop.Controllers
             return View();
         }
 
-        //public ActionResult Produse()
-        //{
-        //    ViewBag.Message = "Hello";
-
-        //    return View();
-        //}
+       
     }
 }
