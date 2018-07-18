@@ -15,7 +15,7 @@ namespace Eshop.Models
 
             Item item = new Item()
             {
-                Id = 0,
+                Id = 1,
                 Name = "Produs",
                 Description = "Descriere",
                 Price = 10,

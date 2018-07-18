@@ -9,15 +9,18 @@ namespace Eshop.Models
 
     public class ShoppingStoreDB : DbContext //mostenire
     {
-        public ShoppingStoreDB() : base("ConnectionString")
+        public ShoppingStoreDB() : base("EshopContext")
         {
             //Disable initializer
-            Database.SetInitializer<ShoppingStoreDB>(null);
+            Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
         }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Basket> Baskets { get; set; }
+        public DbSet<Basket_Product> Basket_Products { get; set; }
+        public DbSet<Command> Commands { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
 
     }
