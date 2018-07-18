@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,15 +8,12 @@ namespace Eshop.Models
 {
     public class Category
     {
-        //private Category _category;
+        [Key]//pt a se sti ca este cheie primara
+        public int Id { get; set; }//metoda
 
-        //public string Name { get; set; } //metoda
-        //public Category category { get => _category; set => _category = value; } //aducem informatia din clasa Category
-
-        public int CategoryId { get; set; }
+        [Required]
+        [MaxLength(35)]
         public string Name { get; set; }
-        public string Description { get; set; }
-        public int ItemId { get; set; }
-        //public List<Item> Items { get; set; }
+
     }
 }

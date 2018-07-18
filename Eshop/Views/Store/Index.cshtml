@@ -1,5 +1,8 @@
-﻿@model IEnumerable<Eshop.Models.Category> 
-    @*IEnumerable folosit pt ca avem mai multe categorii*@
+﻿@using System.Linq
+
+@model IEnumerable<Eshop.Models.Category>
+@*IEnumerable folosit pt ca avem mai multe categorii*@
+
 
 @{
     ViewBag.Title = "Store";
@@ -11,7 +14,8 @@
     genres:
 </p>
 <ul>
-    @foreach(var category in Model){
-        <li>@Html.ActionLink(category.Name,"Browse",new { category = category.Name })</li> @*Controller action name = Browse si dupa valoare*@
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.Name, "BrowseCategory", new { category = category.Name })</li> @*Controller action name = Browse si dupa valoare*@
     }
 </ul>

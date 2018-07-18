@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,18 +9,33 @@ namespace Eshop.Models
 {
     public class Item
     {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        [MaxLength(35)]
+        public string Name { get; set; }
+
+        [MaxLength(50)]
+        public string Description { get; set; }
+
+        public decimal Price { get; set; }
+
+        [MaxLength(15)]
+        public string Producer { get; set; }
+
+        [Key]
+        [ForeignKey("Category")]
+        public int Id_Category { get; set; }
+
+
+
+
+
 
         
 
-        public int ItemId { get; set; } //metoda
-        public int CategoryId { get; set; }
-        public int ProducerIdId { get; set; }
-        public string Title { get; set; }
-        public decimal Price { get; set; }
-        public string ItemUrl { get; set; }
-        public Category category { get; set; }
-        public Producer producer { get; set; }
-        public Item item { get; set; }
+        
         
 
     }

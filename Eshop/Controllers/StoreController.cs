@@ -9,6 +9,8 @@ namespace Eshop.Controllers
 {
     public class StoreController : Controller
     {
+        private int item;
+
         // GET: Store
         public ActionResult Index()
         {
@@ -30,22 +32,22 @@ namespace Eshop.Controllers
 
         }
 
-        public ActionResult Item(int itemm)
+        public ActionResult Item()
         {
 
             var item = new List<Item>
             {
-                new Item {ItemId = 1},
-                new Item {ItemId = 2},
-                new Item {ItemId = 3}
+                new Item {Id = 1},
+                new Item {Id = 2},
+                new Item {Id = 3}
             };
             return View(item);
 
         }
 
-        public ActionResult BrowseItem(int item)
+        public ActionResult BrowseItem()
         {
-            var itemModel = new Item { ItemId = item };
+            var itemModel = new Item { Id = item };
             return View(itemModel);
         }
 
