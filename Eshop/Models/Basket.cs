@@ -12,7 +12,7 @@ namespace Eshop.Models
         public int Id { get; set; }
 
         [MaxLength(15)]
-        public string Condition { get; set; }
+        public bool Condition { get; set; }
 
         public DateTime Update_Data { get; set; }
 
