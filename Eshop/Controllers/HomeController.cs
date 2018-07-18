@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eshop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Eshop.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -23,9 +25,16 @@ namespace Eshop.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
+            Contact model = new Contact();
+            model.FirstName = "Alan";
+            model.LastName = "Ion";
+            model.Phone = 0722;
+            model.Message = "Bine ai venit!";
+            model.Id = 0;
+            model.Email = "sasss@gmai.com";
+            return View(model);
         }
+
 
        
     }
