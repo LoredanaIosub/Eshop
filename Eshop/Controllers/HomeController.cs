@@ -27,30 +27,20 @@ namespace Eshop.Controllers
         {
             ViewBag.Message = "Your contact page.";
             Contact model = new Contact();
-            model.FirstName = "Alan";
-            model.LastName = "Ion";
-            model.Phone = 0722433444;
-            model.Message = "Bine ai venit!";
-            model.Id_Contact = 0;
-            model.Email = "sasss@gmai.com";
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Contact(Contact contact)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                if (contact.Id_Contact == 0)
+                using (var ctx = new ShoppingStoreDB())
                 {
-                   using(var ctx = new ShoppingStoreDB())
-                    {
-                        ctx.Contacts.Add(contact);
-                        ctx.SaveChanges();
-                    }
+                    ctx.Contacts.Add(contact);
+                    ctx.SaveChanges();
                 }
-                // to do update contact7
-            }
+            } 
 
             return View(contact);
         }
