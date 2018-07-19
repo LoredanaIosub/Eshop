@@ -9,7 +9,7 @@ namespace Eshop.Models
     public class Category
     {
         [Key]//pt a se sti ca este cheie primara
-        public int Id { get; set; }//metoda
+        public int Id_Category { get; set; }//metoda
 
         [Required]
         [MaxLength(35)]

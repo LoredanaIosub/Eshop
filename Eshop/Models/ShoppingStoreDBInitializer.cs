@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace Eshop.Models
@@ -9,23 +10,26 @@ namespace Eshop.Models
         {
             Category category = new Category()
             {
-                Id = 0,
+                Id_Category = 0,
                 Name = "Categorie"
             };
 
+            var categories = new List<Category>();
+            categories.Add(category);
+
             Item item = new Item()
             {
-                Id = 0,
+                Id_Item = 0,
                 Name = "Produs",
                 Description = "Descriere",
                 Price = 10,
                 Producer = "Producator",
-                Id_Category = 0
+                Categories = categories
             };
 
             Basket basket = new Basket()
             {
-                Id = 0,
+                Id_Basket = 0,
                 Condition = "Conditie",
                 Total_Price = 15
             };
