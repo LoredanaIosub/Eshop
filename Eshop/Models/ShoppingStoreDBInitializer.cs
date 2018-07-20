@@ -26,7 +26,7 @@ namespace Eshop.Models
             Basket basket = new Basket()
             {
                 Id = 0,
-                Condition = "Conditie",
+                Condition =true,
                 Total_Price = 15
             };
         }

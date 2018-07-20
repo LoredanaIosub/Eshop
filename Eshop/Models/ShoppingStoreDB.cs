@@ -9,7 +9,7 @@ namespace Eshop.Models
 
     public class ShoppingStoreDB : DbContext //mostenire
     {
-        public ShoppingStoreDB() : base("EshopContext")
+        public ShoppingStoreDB() : base("Eshop")
         {
             //Disable initializer
             Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
@@ -21,8 +21,7 @@ namespace Eshop.Models
         public DbSet<Basket_Product> Basket_Products { get; set; }
         public DbSet<Command> Commands { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
-
+        public object ContactModels { get; internal set; }
     }
 
 }
