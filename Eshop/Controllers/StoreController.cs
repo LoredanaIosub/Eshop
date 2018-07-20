@@ -37,9 +37,9 @@ namespace Eshop.Controllers
 
             var item = new List<Item>
             {
-                new Item {Id = 1},
-                new Item {Id = 2},
-                new Item {Id = 3}
+                new Item {Id_Item = 1},
+                new Item {Id_Item = 2},
+                new Item {Id_Item = 3}
             };
             return View(item);
 
@@ -47,7 +47,7 @@ namespace Eshop.Controllers
 
         public ActionResult BrowseItem()
         {
-            var itemModel = new Item { Id = item };
+            var itemModel = new Item { Id_Item = item };
             return View(itemModel);
         }
 

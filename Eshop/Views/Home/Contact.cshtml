@@ -1,5 +1,6 @@
 ﻿@using Eshop.Models;
 
+
 @model Contact
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -26,13 +27,19 @@
         </div>
     </div>
 </div>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
+    <div>
+
+        <h1 class="text-left">&ensp;&nbsp;Contact us</h1>
+
+    </div>
+
 <div class="form-horizontal">
     <hr />
     @Html.ValidationSummary(true)
-    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.Id_Contact)
 
     <div class="form-group">
         @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })

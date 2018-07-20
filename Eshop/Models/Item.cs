@@ -10,7 +10,7 @@ namespace Eshop.Models
     public class Item
     {
         [Key]
-        public int Id { get; set; }
+        public int Id_Item { get; set; }
 
         [Required]
         [MaxLength(35)]
@@ -24,9 +24,10 @@ namespace Eshop.Models
         [MaxLength(15)]
         public string Producer { get; set; }
 
-        [Key]
-        [ForeignKey("Category")]
         public int Id_Category { get; set; }
+
+        [ForeignKey("Id_Category")]
+        public virtual ICollection<Category> Categories { get; set; }
 
 
 

@@ -10,25 +10,25 @@ namespace Eshop.Models
     public class Contact 
     {
         [Key] //Id declarat ca cheie primara
-        public int Id { get; set; }
+        public int Id_Contact { get; set; }
 
         [Required]//Necesar
-        [MaxLength(15, ErrorMessage = "FirstName must be 15 characters or less"), MinLength(2)]
+        [StringLength(15,ErrorMessage = "FirstName must be 15 characters or less", MinimumLength = 3)]
         public string FirstName { get; set; }
 
         [Required]
-        [MaxLength(15, ErrorMessage = "LastName must be 15 characters or less"), MinLength(2)]
+        [StringLength(15, ErrorMessage = "LastName must be 15 characters or less", MinimumLength = 3)]
         public string LastName { get; set; }
 
-        [MaxLength(10, ErrorMessage = "Phone must have 10 numbers"), MinLength(10)]
+        [Range(0,10)]
         public int Phone { get; set; }
 
         [Required]
-        [MaxLength(15, ErrorMessage = "Email must be 15 characters or less"), MinLength(2)]
+        [StringLength(40, ErrorMessage = "Email must be 40 characters or less", MinimumLength = 5)]
         public string Email { get; set; }
 
-        [Required] 
-        [MaxLength(300, ErrorMessage = "Message must be minimum 20 characters."), MinLength(20)]
+        [Required]
+        [StringLength(300, ErrorMessage = "Message must be 300 characters or less", MinimumLength = 3)]
         public string Message { get; set; }
     }
 }
