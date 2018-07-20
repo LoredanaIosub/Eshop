@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop", "Eshop\Eshop.csproj", "{77B6E1AB-10D2-413F-A5F5-353768A0F9BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Tests", "Eshop.Tests\Eshop.Tests.csproj", "{4FDAED25-4325-4864-A9B7-74C0A6AE9CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77B6E1AB-10D2-413F-A5F5-353768A0F9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B6E1AB-10D2-413F-A5F5-353768A0F9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B6E1AB-10D2-413F-A5F5-353768A0F9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B6E1AB-10D2-413F-A5F5-353768A0F9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FDAED25-4325-4864-A9B7-74C0A6AE9CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDAED25-4325-4864-A9B7-74C0A6AE9CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDAED25-4325-4864-A9B7-74C0A6AE9CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDAED25-4325-4864-A9B7-74C0A6AE9CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E7BDB0-938D-451A-950B-CF80765CC7CC}
+	EndGlobalSection
+EndGlobal
