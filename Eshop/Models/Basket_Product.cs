@@ -10,11 +10,19 @@ namespace Eshop.Models
     public class Basket_Product
     {
         [Key]
-        [ForeignKey("Basket")]
-        public int Id_Basket { set; get; }
+        [Column("Id_Basket", Order=0)]
+        public int Id_Basket { get; set; }
+
+        [ForeignKey("Id_Basket")]
+        public virtual ICollection<Basket> Baskets { get; set; }
+      
+
         [Key]
-        [ForeignKey("Item")]
-        public int Id_Product { set; get; }
+        [Column("Id_Item", Order = 1)]
+        public int Id_Item { get; set; }
+
+        [ForeignKey("Id_Item")]
+        public virtual ICollection<Item> Items { get; set; }
 
         public int Quantity { set; get; }
 

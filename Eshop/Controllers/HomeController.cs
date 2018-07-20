@@ -22,20 +22,28 @@ namespace Eshop.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
             Contact model = new Contact();
-            model.FirstName = "Alan";
-            model.LastName = "Ion";
-            model.Phone = 0722;
-            model.Message = "Bine ai venit!";
-            model.Id = 0;
-            model.Email = "sasss@gmai.com";
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult Contact(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var ctx = new ShoppingStoreDB())
+                {
+                    ctx.Contacts.Add(contact);
+                    ctx.SaveChanges();
+                }
+            } 
 
+            return View(contact);
+        }
        
     }
 }

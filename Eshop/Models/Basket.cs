@@ -9,7 +9,7 @@ namespace Eshop.Models
     public class Basket
     {
         [Key]
-        public int Id { get; set; }
+        public int Id_Basket { get; set; }
 
         [MaxLength(15)]
         public bool Condition { get; set; }
