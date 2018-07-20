@@ -24,10 +24,11 @@ namespace Eshop.Models
         [MaxLength(15)]
         public string Producer { get; set; }
 
+        [ForeignKey("Category")]
         public int Id_Category { get; set; }
+        public Category Category { get; set; }
 
-        [ForeignKey("Id_Category")]
-        public virtual ICollection<Category> Categories { get; set; }
+        
 
 
 

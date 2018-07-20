@@ -9,7 +9,7 @@ namespace Eshop.Controllers
 {
     public class StoreController : Controller
     {
-        private int item;
+        
 
         // GET: Store
         public ActionResult Index()
@@ -47,7 +47,7 @@ namespace Eshop.Controllers
 
         public ActionResult BrowseItem()
         {
-            var itemModel = new Item { Id_Item = item };
+            var itemModel = new Item { Id_Item = 0 };
             return View(itemModel);
         }
 

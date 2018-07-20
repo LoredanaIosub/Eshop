@@ -14,8 +14,6 @@ namespace Eshop.Models
                 Name = "Categorie"
             };
 
-            var categories = new List<Category>();
-            categories.Add(category);
 
             Item item = new Item()
             {
@@ -24,15 +22,15 @@ namespace Eshop.Models
                 Description = "Descriere",
                 Price = 10,
                 Producer = "Producator",
-                Categories = categories
+                Category = category
             };
 
-            Basket basket = new Basket()
-            {
-                Id_Basket = 0,
-                Condition = false,
-                Total_Price = 15
-            };
+            //Basket basket = new Basket()
+            //{
+            //    Id_Basket = 0,
+            //    Condition = false,
+            //    Total_Price = 15
+            //};
         }
 
 
