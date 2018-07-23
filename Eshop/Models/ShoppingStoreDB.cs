@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using Eshop.Migrations;
 
 namespace Eshop.Models
 { 
@@ -12,17 +13,25 @@ namespace Eshop.Models
         public ShoppingStoreDB() : base("EshopDB")
         {
             //Disable initializer
-            Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
+            //Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ShoppingStoreDB, Configuration>());
         }
 
-        //public DbSet<Category> Categories { get; set; }
-        //public DbSet<Item> Items { get; set; }
-        //public DbSet<Basket> Baskets { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        //public DbSet<Basket_Product> Basket_Products { get; set; }
+        public DbSet<Basket_Product> Basket_Products { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
 
         //protected override void onmodelcreating(dbmodelbuilder modelbuilder)
         //{
+
         //    var one = modelbuilder.entity<category>();
         //    one.totable("category");
 
