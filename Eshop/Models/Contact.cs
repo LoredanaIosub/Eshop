@@ -20,7 +20,8 @@ namespace Eshop.Models
         [StringLength(15, ErrorMessage = "LastName must be 15 characters or less", MinimumLength = 3)]
         public string LastName { get; set; }
 
-        [Range(0,10)]
+        //[Range(,)]
+        //[RegularExpression(@"^(\d{10})$", ErrorMessage = "Wrong mobile")]
         public int Phone { get; set; }
 
         [Required]
