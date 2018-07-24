@@ -28,17 +28,20 @@ namespace Eshop.Models
         public int Id_Category { get; set; }
         public Category Category { get; set; }
 
-        
+        public virtual ICollection<Basket_Product> Basket_Products { get; set; }
 
 
 
 
 
 
-        
 
-        
-        
+
+
+
+
+
+
 
     }
         
