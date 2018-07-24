@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace Eshop.Controllers
 {
     public class HomeController : Controller
@@ -41,9 +42,15 @@ namespace Eshop.Controllers
                     ctx.SaveChanges();
                 }
             } 
-
             return View(contact);
         }
+
        
+
+
+
+
+    
+
     }
 }

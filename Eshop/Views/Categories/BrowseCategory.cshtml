@@ -17,6 +17,6 @@
 <ul>
     @*@foreach (var item in Model)
     {*@
-        <li>@Html.ActionLink(Model.Id.ToString(), "BrowseItem", new { item = Model.Id })</li> @*Controller action name = Browse si dupa valoare*@
+        <li>@Html.ActionLink(Model.Id_Category.ToString(), "BrowseItem", new { item = Model.Id_Category })</li> @*Controller action name = Browse si dupa valoare*@
     @*}*@
 </ul>
