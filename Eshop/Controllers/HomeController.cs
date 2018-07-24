@@ -40,10 +40,23 @@ namespace Eshop.Controllers
                     ctx.Contacts.Add(contact);
                     ctx.SaveChanges();
                 }
-            } 
+            }
 
             return View(contact);
         }
-       
+
+        //public ActionResult Delete(int id = 0)
+        //{
+        //    var ctx = new ShoppingStoreDB();
+        //    Contact contact = ctx.Contacts.Find(id);
+        //    if (contact == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(contact);
+        //}
+        //[HttpPost, ActionName ("Delete")]
+
+
     }
 }

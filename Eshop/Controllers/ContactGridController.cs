@@ -15,13 +15,34 @@ namespace Eshop.Controllers
             return View();
         }
 
-        private ShoppingStoreDB ctx = new ShoppingStoreDB();
 
         public ActionResult ContactGrid()
         {
-            return View(ctx.Contacts.ToList());
+            IList<Contact> contacts;
+
+            using (var context = new ShoppingStoreDB())
+            {
+                contacts = context.Contacts.ToList();
+            }
+
+            return View(contacts);
         }
 
+        public ActionResult Delete(int id)
+        {
+            using (var ctx = new ShoppingStoreDB())
+            {
+                var contact = ctx.Contacts.Find(id);
+                if (contact != null)
+                {
+                    ctx.Contacts.Remove(contact);
+                    ctx.SaveChanges();
+                }
+            }
+
+            return RedirectToAction("ContactGrid");
+        }
     }
+
 
 }
