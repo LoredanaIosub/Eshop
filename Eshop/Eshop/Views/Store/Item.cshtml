@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable<Eshop.Models.Item>
+
+@{
+    ViewBag.Title = "Items";
+}
+
+<h2>Browse Items</h2>
+<p>
+    Select from @Model.Count()
+    genres:
+</p>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.ItemId, "Browse", new { item = item.ItemId })</li> @*Controller action name = Browse si dupa valoare*@
+    }
+</ul>
+

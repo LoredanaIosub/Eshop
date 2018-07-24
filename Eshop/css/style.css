@@ -13,7 +13,6 @@ Fonts: Hind
 
 Table OF Contents
 ------------------------------------
-
 1 > GENERAL
 ------ typography
 ------ Buttons
@@ -151,7 +150,7 @@ hr {
 
 .primary-btn {
   color: #FFF;
-  background-color: black;
+  background-color: ghostwhite;
 }
 
 .primary-btn:hover, .primary-btn:focus {
