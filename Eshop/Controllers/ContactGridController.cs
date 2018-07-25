@@ -1,22 +1,20 @@
 ﻿using Eshop.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Eshop.Controllers
 {
     public class ContactGridController : Controller
     {
-        // GET: ContactGrid
+        //// GET: ContactGrid
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
+
+
         public ActionResult Index()
-        {
-            return View();
-        }
-
-
-        public ActionResult ContactGrid()
         {
             IList<Contact> contacts;
 
@@ -40,7 +38,7 @@ namespace Eshop.Controllers
                 }
             }
 
-            return RedirectToAction("ContactGrid");
+            return RedirectToAction("Index");
         }
     }
 

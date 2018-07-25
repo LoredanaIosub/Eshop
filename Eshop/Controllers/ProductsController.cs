@@ -15,7 +15,6 @@ namespace Eshop.Controllers
             return View();
         }
 
-
         public ActionResult ProductsGrid()
         {
             IList<Contact> products;
