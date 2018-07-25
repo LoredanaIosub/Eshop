@@ -16,7 +16,7 @@ namespace Eshop.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult product-page()
         {
             ViewBag.Message = "Your application description page.";
 

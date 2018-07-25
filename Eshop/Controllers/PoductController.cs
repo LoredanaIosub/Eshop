@@ -27,4 +27,5 @@ namespace Eshop.Controllers
             return View(productModel);
         }
 
+    }
 }
