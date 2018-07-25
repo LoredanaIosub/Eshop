@@ -10,13 +10,13 @@ namespace Eshop.Controllers
     public class ContactGridController : Controller
     {
         // GET: ContactGrid
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
+
+
         public ActionResult Index()
-        {
-            return View();
-        }
-
-
-        public ActionResult ContactGrid()
         {
             IList<Contact> contacts;
 
@@ -40,7 +40,7 @@ namespace Eshop.Controllers
                 }
             }
 
-            return RedirectToAction("ContactGrid");
+            return RedirectToAction("Index");
         }
     }
 
