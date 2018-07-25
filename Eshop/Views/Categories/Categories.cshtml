@@ -2,13 +2,13 @@
 @using GridMvc.Html
 
 @{
-    ViewBag.Title = "CategoriesGrid";
+    ViewBag.Title = "Categories";
 }
 
 <h2>CategoriesGrid</h2>
 
 <p>
-    @Html.ActionLink("Add New Category", "Add")
+    @Html.ActionLink("Add New Category","Edit", new { id = -1 })
 </p>
 <table class="table">
     <tr>
@@ -23,17 +23,20 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id_Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id_Category })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id_Category })
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id_Category })
+        </td>
+    </tr>
     }
 
 </table>

@@ -9,7 +9,7 @@ namespace Eshop.Controllers
 {
     public class ContactGridController : Controller
     {
-        // GET: ContactGrid
+        //// GET: ContactGrid
         //public ActionResult Index()
         //{
         //    return View();
