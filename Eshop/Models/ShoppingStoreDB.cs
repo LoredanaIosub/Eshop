@@ -18,7 +18,7 @@ namespace Eshop.Models
         }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Item> Items { get; set; }
+        public DbSet<Item> Products { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Basket_Product> Basket_Products { get; set; }

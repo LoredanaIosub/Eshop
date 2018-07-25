@@ -17,7 +17,7 @@ namespace Eshop.Controllers
 
         public ActionResult ProductsGrid()
         {
-            IList<Contact> products;
+            IList<Item> products;
 
             using (var context = new ShoppingStoreDB())
             {
@@ -34,7 +34,7 @@ namespace Eshop.Controllers
                 var product = ctx.Products.Find(id);
                 if (product != null)
                 {
-                    ctx.Contacts.Remove(product);
+                    ctx.Products.Remove(product);
                     ctx.SaveChanges();
                 }
             }

@@ -19,7 +19,7 @@ namespace Eshop.Controllers
         // GET: api/Items
         public IList<Item> GetItems()
         {
-            var items = db.Items.ToList();
+            var items = db.Products.ToList();
             return items;
         }
 
@@ -27,7 +27,7 @@ namespace Eshop.Controllers
         [ResponseType(typeof(Item))]
         public IHttpActionResult GetItem(int id)
         {
-            Item item = db.Items.Find(id);
+            Item item = db.Products.Find(id);
             if (item == null)
             {
                 return NotFound();
@@ -80,7 +80,7 @@ namespace Eshop.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Items.Add(item);
+            db.Products.Add(item);
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = item.Id_Item }, item);
@@ -90,13 +90,13 @@ namespace Eshop.Controllers
         [ResponseType(typeof(Item))]
         public IHttpActionResult DeleteItem(int id)
         {
-            Item item = db.Items.Find(id);
+            Item item = db.Products.Find(id);
             if (item == null)
             {
                 return NotFound();
             }
 
-            db.Items.Remove(item);
+            db.Products.Remove(item);
             db.SaveChanges();
 
             return Ok(item);
@@ -113,7 +113,7 @@ namespace Eshop.Controllers
 
         private bool ItemExists(int id)
         {
-            return db.Items.Count(e => e.Id_Item == id) > 0;
+            return db.Products.Count(e => e.Id_Item == id) > 0;
         }
     }
 }
