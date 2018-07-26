@@ -16,13 +16,6 @@ namespace Eshop.Controllers
             return View();
         }
 
-        public ActionResult product-page()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
         [HttpGet]
         public ActionResult Contact()
         {

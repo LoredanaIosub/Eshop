@@ -8,17 +8,17 @@ using System.Web.Mvc;
 
 namespace Eshop.Models
 {
-    public class ShoppingStoreDB : DbContext
-    {
-        public ShoppingStoreDB() : base("EshopContext")
-        {
-            Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
-        }
+    //public class ShoppingStoreDB : DbContext
+    //{
+    //    public ShoppingStoreDB() : base("EshopContext")
+    //    {
+    //        Database.SetInitializer<ShoppingStoreDB>(new CreateDatabaseIfNotExists<ShoppingStoreDB>());
+    //    }
 
-        public DbSet<Category> Id { get; set; }
-        public DbSet<Category> Name { get; set; }
-        public DbSet<Basket_Product> Id_Basket { get; set; }
-        public DbSet<Basket_Product> Quantity { get; set; }
-        public DbSet<Basket_Product> Stock { get; set; }
-    }
+    //    public DbSet<Category> Id { get; set; }
+    //    public DbSet<Category> Name { get; set; }
+    //    public DbSet<Basket_Product> Id_Basket { get; set; }
+    //    public DbSet<Basket_Product> Quantity { get; set; }
+    //    public DbSet<Basket_Product> Stock { get; set; }
+    //}
 }
