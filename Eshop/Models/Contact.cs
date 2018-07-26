@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 
 namespace Eshop.Models
@@ -20,12 +21,13 @@ namespace Eshop.Models
         [StringLength(15, ErrorMessage = "LastName must be 15 characters or less", MinimumLength = 3)]
         public string LastName { get; set; }
 
-        //[Range(,)]
-        //[RegularExpression(@"^(\d{10})$", ErrorMessage = "Wrong mobile")]
-        public int Phone { get; set; }
 
         [Required]
-        [StringLength(40, ErrorMessage = "Email must be 40 characters or less", MinimumLength = 5)]
+        [RegularExpression(@"^(?<paren>\()?0(?:(?:72|74|75|76|77|78)(?(paren)\))(?<first>\d)(?!\k<first>{6})\d{6}|(?:251|351)(?(paren)\))(?<first>\d)(?!\k<first>{5})\d{5})$", ErrorMessage = "Invalid Phone number")]
+        public String Phone { get; set; }
+
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address.")]
         public string Email { get; set; }
 
         [Required]

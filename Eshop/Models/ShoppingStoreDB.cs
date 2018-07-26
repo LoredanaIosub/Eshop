@@ -28,6 +28,14 @@ namespace Eshop.Models
             base.OnModelCreating(modelBuilder);
         }
 
+        internal void UpdateCategory(Category category)
+        {
+            var dbCategory = this.Categories.Find(category.Id_Category);
+
+            dbCategory.Name = category.Name;
+            this.SaveChanges();
+        }
+
 
         //protected override void onmodelcreating(dbmodelbuilder modelbuilder)
         //{
