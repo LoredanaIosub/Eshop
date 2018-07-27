@@ -14,7 +14,7 @@ namespace Eshop.Controllers
         //}
 
 
-        public ActionResult Index()
+        public ActionResult Contact()
         {
             IList<Contact> contacts;
 

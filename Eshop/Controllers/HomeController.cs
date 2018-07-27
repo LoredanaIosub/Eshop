@@ -5,12 +5,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace Eshop.Controllers
 {
     public class HomeController : Controller
     {
-
+        // GET: Home
         public ActionResult Index()
         {
             return View();
@@ -34,16 +33,9 @@ namespace Eshop.Controllers
                     ctx.Contacts.Add(contact);
                     ctx.SaveChanges();
                 }
-            } 
+            }
             return View(contact);
         }
-
-       
-
-
-
-
-    
-
     }
+
 }
